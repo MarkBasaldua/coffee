@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mystyle.css">
+    <title>About Us - Coffee Bliss</title>
+</head>
+<body>
+    <header>
+        <h1 class="logo">Coffee Bliss</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="courses.html">COURSES</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+        <p>Coffee Bliss: Your Ultimate Coffee Experience</p>
+        <p>Learn from the experts and discover the best coffee recipes and tips.</p>
+    </header>
+    <main class="container">
+        <h2>About Us</h2>
+        <p>Welcome to Coffee Bliss! We are passionate about bringing you the finest coffee experiences from around the world.</p>
+        <p>Our mission is to provide high-quality coffee beans and comprehensive courses that help you become a coffee connoisseur.</p>
+        <p>Join us on this journey to discover, learn, and enjoy the rich world of coffee.</p>
+    </main>
+    <footer>
+        <h1>Coffee Bliss</h1>
+        <nav>
+            <a href="about.html">ABOUT US</a>
+            <a href="courses.html">COURSES</a>
+            <a href="contact.html">CONTACT US</a>
+        </nav>
+   

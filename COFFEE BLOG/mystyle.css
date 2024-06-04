@@ -1,0 +1,95 @@
+/*global*/
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #36454f;
+}  
+body{
+    font-family: sans-serif;
+}
+p{
+    line-height: 2;
+}
+h1,h2,h3{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+.rounded-image {
+    border-radius: 20px; /* Adjust the radius as needed */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adjust the shadow size and color */
+}
+
+
+/*utilities*/
+.btn{
+    display: inline-block;
+    background-color: black;
+   padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+.btn-read{
+    background-color: white;
+}
+.btn-more{
+    background-color: #36454f;
+}
+
+.container{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*header*/
+header{
+    background-image:url(./coffee-images-main/banner.jpg);
+    background-size:cover;
+    color: silver;
+    height: 400px;
+    text-align: center;
+}
+
+    .navigation-bar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+}
+.navigation-bar a{
+    color: white;
+    margin-right: 10px;
+}
+
+/*footer*/
+footer {
+    background-color: black;
+    height: 80px; /* Adjusted height */
+    color: white;
+    text-align: center;
+    font-size: 16px; /* Adjusted font size */
+    padding-bottom: 20px; /* Spacing from bottom */
+    position: relative; /* Positioning for absolute positioning of text */
+}
+
+
+/* Three links equally spaced side by side */
+footer a {
+    margin: 0 10px; /* Adjust spacing between links */
+    text-decoration: none;
+    color: white;
+}
+.rounded-image {
+    border-radius: 20px; /* Adjust the radius as needed */}
