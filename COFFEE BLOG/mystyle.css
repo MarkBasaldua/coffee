@@ -55,7 +55,7 @@ img{
 
 /*header*/
 header{
-    background-image:url(./coffee-images-main/banner.jpg);
+    background-image:url(./coffee-images-main/banner.jpg) ;
     background-size:cover;
     color: silver;
     height: 400px;
