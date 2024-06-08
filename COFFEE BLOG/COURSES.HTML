@@ -3,51 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="mystyle.css">
-    <title>Courses - Coffee Blog</title>
+    <link rel="stylesheet" href="./mystyle.css">
+
+    <title>Courses - UrbanBeanery Coffee</title>
 </head>
 <body>
     <header>
-        <div class="overlay">
-            <div class="navigation-bar">
-                <h1>Coffee Blog</h1>
-                <nav>
-                    <a href="index.html">HOME</a>
-                    <a href="ABOUT.HTML">ABOUT US</a>
-                    <a href="COURSES.HTML">COURSES</a>
-                    <a href="CONTACT.HTML">CONTACT</a>
-                </nav>
+        <div class="banner">
+            <div class="title-container">
+                <h1 class="main-title">
+                    <span class="title-word1">Coffee</span>
+                    <span class="title-word2">Courses</span>
+                </h1>
             </div>
+            <nav class="navigation-bar">
+                <div class="nav-links">
+                    <a href="index.html">HOME</a>
+                    <a href="about.html">ABOUT US</a>
+                    <a href="contact.html">CONTACT</a>
+                </div>
+                <div class="hamburger" onclick="toggleMobileMenu()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
         </div>
     </header>
+
     <main class="container">
-        <h2>Our Courses and Workshops</h2>
-        <div>
-            <h3>Coffee Extraction Techniques</h3>
-            <p><span>Price:</span> $100.00</p>
-            <p>This workshop is designed to teach the fundamentals of coffee extraction, ensuring you get the perfect brew every time.</p>
-            <a href="#" class="btn btn-more">MORE INFORMATION</a>
-        </div>
-        <div>
-            <h3>Advanced Espresso Making Course</h3>
-            <p><span>Price:</span> $150.00</p>
-            <p>Dive deep into the art of espresso making with this advanced course. Learn how to pull the perfect shot, steam milk for lattes, and create beautiful latte art.</p>
-            <a href="#" class="btn btn-more">MORE INFORMATION</a>
-        </div>
-        <div>
-            <h3>Specialty Coffee Brewing Workshop</h3>
-            <p><span>Price:</span> $120.00</p>
-            <p>Explore various specialty brewing methods and how to bring out the best flavors in your coffee. This workshop covers everything from Chemex to siphon brewing.</p>
-            <a href="#" class="btn btn-more">MORE INFORMATION</a>
-        </div>
+        <section class="course-list">
+            <h2> Courses & Workshops</h2>
+            <div class="course-item">
+                <img src="https://freeiconshop.com/wp-content/uploads/edd/coffee-outline-filled.png" class="rounded-image" alt="Brewing Course">
+                <h3>Brewing Mastery</h3>
+                <p>Discover the art of brewing the perfect cup of coffee. This course covers everything from selecting the right beans to mastering various brewing methods.</p>
+                <a href="./confirm.html" class="btn btn-more">Buy Course</a>
+                <p></p>
+            </div>
+            <div class="course-item">
+                <img src="https://cdn0.iconfinder.com/data/icons/coffee-and-tea-10/125/Glass_Espresso-512.png" class="rounded-image" alt="Espresso Course">
+                <h3>Espresso Essentials</h3>
+                <p>Learn the techniques to pull the perfect shot of espresso. This course is ideal for those who want to become espresso aficionados.</p>
+                <a href="./confirm.html" class="btn btn-more">Buy Course</a>
+                <p></p>
+            </div>
+            <div class="course-item">
+                <img src="https://img.freepik.com/premium-vector/latte-art-icon-logo-vector-isolated-white-background_850482-23.jpg" class="rounded-image" alt="Latte Art Course">
+                <h3>Latte Art</h3>
+                <p>Master the art of creating beautiful designs in your lattes. This course covers everything from basic to advanced latte art techniques.</p>
+                <a href="./confirm.html" class="btn btn-more">Buy Course</a>
+                <p></p>
+            </div>
+            <div class="course-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhXv89FNMlmYjHHDse7wqZ5vZ1hweUIUNiEg&s" class="rounded-image" alt="Mushroom Coffee Course">
+                <h3>Mushroom Coffee</h3>
+                <p>Explore the benefits and brewing techniques of mushroom coffee. Perfect for those looking to add a healthy twist to their coffee routine.</p>
+                <a href="./confirm.html" class="btn btn-more">Buy Course</a>
+                <p></p>
+            </div>
+            <div class="course-item">
+                <img src="https://www.shutterstock.com/image-vector/marijuana-happy-day-coffee-vector-600nw-1941828886.jpg" class="rounded-image" alt="Cannabis Coffee Course">
+                <h3>Cannabis Coffee</h3>
+                <p>Learn how to brew cannabis-infused coffee and explore its benefits. This course covers everything you need to know about cannabis coffee.</p>
+                <a href="./confirm.html" class="btn btn-more">Buy Course</a>
+                <p></p>
+            </div>
+        </section>
     </main>
+
     <footer>
-        <h1>Coffee Blog</h1>
-        <nav>
-            <a href="ABOUT.HTML">ABOUT US</a>
-            <a href="COURSES.HTML">COURSES</a>
-            <a href="CONTACT.HTML">CONTACT</a>
-        </nav>
+        <div class="navigation-bar">
+            <a href="./FOOTER NAV PAGES/RETURNS.HTML">RETURNS</a>
+            <a href="./FOOTER NAV PAGES/Privacy.html">PRIVACY POLICY</a>
+            <a href="./FOOTER NAV PAGES/TERMS.HTML">TERMS & CONDITIONS</a>
+        </div>
+        <p>&copy; 2024 UrbanBeanery Coffee. All rights reserved.</p>
     </footer>
+    <button id="back-to-top" style="display: none; position: fixed; bottom: 5px; right: 20px; padding: 10px 20px; font-size: 16px; cursor: pointer;">Back to Top</button>
+
+    <script>
+        window.onscroll = function() {
+    var backToTopBtn = document.getElementById("back-to-top");
+
+    // Get the scroll position of the current page
+    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+    // Get the total height of the document
+    var scrollHeight = document.documentElement.scrollHeight;
+
+    // Get the height of the viewport
+    var clientHeight = document.documentElement.clientHeight;
+
+    // Calculate the distance from the bottom
+    var fromBottom = scrollHeight - scrollTop - clientHeight;
+
+    // Adjust this value as needed, smaller value means closer to the bottom
+    if (fromBottom < 20) {
+        backToTopBtn.style.display = "block";
+    } else {
+        backToTopBtn.style.display = "none";
+    }
+};
+
+document.getElementById("back-to-top").onclick = function() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+};
+
+        </script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

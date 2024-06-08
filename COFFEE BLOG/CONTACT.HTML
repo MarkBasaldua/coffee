@@ -4,42 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="mystyle.css">
-    <title>Contact Us - Coffee Blog</title>
+    <title>Contact Us - Urban Beanery</title>
 </head>
 <body>
     <header>
-        <div class="overlay">
-            <div class="navigation-bar">
-                <h1>Coffee Blog</h1>
-                <nav>
-                    <a href="index.html">HOME</a>
-                    <a href="ABOUT.HTML">ABOUT US</a>
-                    <a href="COURSES.HTML">COURSES</a>
-                    <a href="CONTACT.HTML">CONTACT</a>
+        <div class="header-container">
+            <div class="banner">
+                <div class="title-container">
+                    <h1 class="main-title">
+                        <span class="title-word1">URBAN</span>
+                        <span class="title-word2">BEANERY</span>
+                    </h1>
+                </div>
+                <nav class="navigation-bar">
+                    <ul class="nav-links">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="ABOUT.html">ABOUT</a></li>
+                        <li><a href="COURSES.HTML">COURSES</a></li>
+                    </ul>
                 </nav>
             </div>
         </div>
     </header>
+
     <main class="container">
-        <h2>Contact Us</h2>
-        <p>We'd love to hear from you! Please fill out the form below to get in touch with us.</p>
-        <form action="submit_contact_form.php" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea><br>
-            <input type="submit" value="Submit" class="btn">
+        <h1>Contact Us</h1>
+        <p>If you have any questions or need further information, please don't hesitate to contact us. We're here to help!</p>
+        <form action="send_form.php" method="post">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-submit">Submit</button>
         </form>
     </main>
+
     <footer>
-        <h1>Coffee Blog</h1>
-        <nav>
-            <a href="ABOUT.HTML">ABOUT US</a>
-            <a href="COURSES.HTML">COURSES</a>
-            <a href="CONTACT.HTML">CONTACT</a>
-        </nav>
+        <div class="navigation-bar">
+            <a href="./FOOTER NAV PAGES/RETURNS.HTML">RETURNS</a>
+            <a href="./FOOTER NAV PAGES/Privacy.html">PRIVACY POLICY</a>
+            <a href="./FOOTER NAV PAGES/TERMS.HTML">TERMS & CONDITIONS</a>
+        </div>
+        <p>&copy; 2024 Urban Beanery Coffee. All rights reserved.</p>
     </footer>
-</body>
-</html>
+

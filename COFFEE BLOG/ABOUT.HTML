@@ -3,34 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="mystyle.css">
-    <title>About Us - Coffee Blog</title>
+    <link rel="stylesheet" href="./mystyle.css">
+    <title>About Us - UrbanBeanery Coffee</title>
 </head>
-<body>
+<body class="about-us-page">
     <header>
-        <div class="overlay">
-            <div class="navigation-bar">
-                <h1>Coffee Blog</h1>
-                <nav>
-                    <a href="index.html">HOME</a>
-                    <a href="ABOUT.HTML">ABOUT US</a>
-                    <a href="COURSES.HTML">COURSES</a>
-                    <a href="CONTACT.HTML">CONTACT</a>
+        <div class="header-container">
+            <div class="banner">
+                <div class="title-container">
+                    <h1 class="main-title">
+                        <span class="title-word1">ABOUT</span>
+                        <span class="title-word2">US</span>
+                    </h1>
+                </div>
+                <nav class="navigation-bar">
+                    <div class="nav-links">
+                        <a href="index.html">HOME</a>
+                        <a href="COURSES.HTML">COURSES</a>
+                        <a href="contact.html">CONTACT</a>
+                    </div>
+                    <div class="hamburger" onclick="toggleMobileMenu()">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
                 </nav>
             </div>
         </div>
     </header>
-    <main class="container">
-        <h2>About Us</h2>
-        <p>Welcome to Coffee Blog! We are passionate about coffee and dedicated to bringing you the best tips, recipes, and courses to enhance your coffee experience. Our experts share their knowledge to help you brew the perfect cup every time.</p>
-    </main>
+    <section class="centered-section">
+        <main class="container">
+            <section class="about-us">
+                <h2>Our Story</h2>
+                <p>UrbanBeanery Coffee was born out of a passion for exceptional coffee and a commitment to building a vibrant community. Founded by a group of coffee enthusiasts in the heart of the city, our journey began with a simple mission: to bring people together over a shared love for high-quality, ethically sourced coffee. From our humble beginnings as a small local café, we have grown into a beloved brand known for our unique blends, innovative brewing techniques, and unwavering dedication to our customers.</p>
+
+                <h2>Our Persona</h2>
+                <p>Our persona is built around the modern urbanite who values quality, sustainability, and community. We cater to coffee lovers who are curious, adventurous, and always seeking new experiences. Our customers are environmentally conscious, appreciate the artistry of coffee-making, and enjoy connecting with others who share their passion.</p>
+
+                <h2>Our Ethos</h2>
+                <p>At UrbanBeanery Coffee, we believe that great coffee has the power to create meaningful connections and drive positive change. We are committed to sourcing our beans responsibly, supporting sustainable farming practices, and fostering a sense of community among our customers. We strive to be more than just a coffee brand; we aim to be a force for good in our community and beyond.</p>
+
+                <h2>Our Goals</h2>
+                <ul>
+                    <strong>Community Engagement:</strong> To build a strong, engaged community of coffee lovers through events, workshops, and social media. <p></p>
+                    <strong>Sustainability:</strong> To lead the industry in sustainable practices, from bean to cup. <p></p>
+                    <strong>Innovation:</strong> To continuously innovate and elevate the coffee experience for our customers. <p></p>
+                    <strong>Quality:</strong> To maintain the highest standards of quality in every cup of coffee we serve. <p></p>
+                </ul>
+            </section>
+        </main>
+    </section>
+
     <footer>
-        <h1>Coffee Blog</h1>
-        <nav>
-            <a href="ABOUT.HTML">ABOUT US</a>
-            <a href="COURSES.HTML">COURSES</a>
-            <a href="CONTACT.HTML">CONTACT</a>
-        </nav>
+        <div class="navigation-bar">
+            <a href="./FOOTER NAV PAGES/RETURNS.HTML">RETURNS</a>
+            <a href="./FOOTER NAV PAGES/Privacy.html">PRIVACY POLICY</a>
+            <a href="./FOOTER NAV PAGES/TERMS.HTML">TERMS & CONDITIONS</a>
+        </div>
+        <p>&copy; 2024 UrbanBeanery Coffee. All rights reserved.</p>
     </footer>
+    <button id="back-to-top" style="display: none; position: fixed; bottom: 5px; right: 20px; padding: 10px 20px; font-size: 16px; cursor: pointer;">Back to Top</button>
+
+    <script>
+        window.onscroll = function() {
+    var backToTopBtn = document.getElementById("back-to-top");
+
+    // Get the scroll position of the current page
+    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+    // Get the total height of the document
+    var scrollHeight = document.documentElement.scrollHeight;
+
+    // Get the height of the viewport
+    var clientHeight = document.documentElement.clientHeight;
+
+    // Calculate the distance from the bottom
+    var fromBottom = scrollHeight - scrollTop - clientHeight;
+
+    // Adjust this value as needed, smaller value means closer to the bottom
+    if (fromBottom < 20) {
+        backToTopBtn.style.display = "block";
+    } else {
+        backToTopBtn.style.display = "none";
+    }
+};
+
+document.getElementById("back-to-top").onclick = function() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+};
+
+        </script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

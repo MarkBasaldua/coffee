@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Confirmation</title>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.css" rel="stylesheet" type="text/css">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f5f5f7;
+            color: #1d1d1f;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .content, .spinner-container {
+            display: none;
+        }
+        .spinner-container.active, .content.active {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+        }
+        .spinner {
+            font-size: 48px;
+            position: relative;
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+        }
+        .spinner .spinner-blade {
+            position: absolute;
+            left: 0.4629em;
+            bottom: 0;
+            width: 0.074em;
+            height: 0.2777em;
+            border-radius: 0.0555em;
+            background-color: transparent;
+            transform-origin: center -0.2222em;
+            animation: spinner-fade 1s infinite linear;
+        }
+        .spinner .spinner-blade:nth-child(1) { animation-delay: 0s; transform: rotate(0deg); }
+        .spinner .spinner-blade:nth-child(2) { animation-delay: 0.083s; transform: rotate(30deg); }
+        .spinner .spinner-blade:nth-child(3) { animation-delay: 0.166s; transform: rotate(60deg); }
+        .spinner .spinner-blade:nth-child(4) { animation-delay: 0.249s; transform: rotate(90deg); }
+        .spinner .spinner-blade:nth-child(5) { animation-delay: 0.332s; transform: rotate(120deg); }
+        .spinner .spinner-blade:nth-child(6) { animation-delay: 0.415s; transform: rotate(150deg); }
+        .spinner .spinner-blade:nth-child(7) { animation-delay: 0.498s; transform: rotate(180deg); }
+        .spinner .spinner-blade:nth-child(8) { animation-delay: 0.581s; transform: rotate(210deg); }
+        .spinner .spinner-blade:nth-child(9) { animation-delay: 0.664s; transform: rotate(240deg); }
+        .spinner .spinner-blade:nth-child(10) { animation-delay: 0.747s; transform: rotate(270deg); }
+        .spinner .spinner-blade:nth-child(11) { animation-delay: 0.83s; transform: rotate(300deg); }
+        .spinner .spinner-blade:nth-child(12) { animation-delay: 0.913s; transform: rotate(330deg); }
+
+        @keyframes spinner-fade {
+            0% { background-color: #69717d; }
+            100% { background-color: transparent; }
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        .container h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .container p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .amount {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .button {
+            display: inline-block;
+            background-color: #007aff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #005bb5;
+        }
+        .note {
+            font-size: 14px;
+            color: #8e8e93;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="spinner-container active">
+        <div class="spinner">
+            <div class="spinner-blade"></div>
+            <div class="spinner-blade"></div>
+            <div class="spinner-blade"></div>
+            <div class="spinner-blade"></div>
+            <div class="spinner-blade"></div>
+            <div class="spinner-blade"></div>
+            <div class="spinner-blade"></div>
+            <div class="spinner-blade"></div>
+            <div class="spinner-blade"></div>
+            <div class="spinner-blade"></div>
+            <div class="spinner-blade"></div>
+            <div class="spinner-blade"></div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="container">
+            <img src="https://img.icons8.com/color/48/000000/checkmark.png" alt="Checkmark" width="48" height="48">
+            <h1>Thank you for your payment!</h1>
+            <p>A receipt for this transaction has been sent via email for your records.</p>
+            <p class="amount">$9700.00</p>
+            <p>Payment Message</p>
+            <p>PAYMENT PROCESSED 832641</p>
+            <p>Payment Method</p>
+            <p>EFT (Check)</p>
+            <p>XXX0000</p>
+            <a href="#" class="button">Sign up for AutoPay</a>
+            <p class="note">
+                Minimize the time you spend paying bills by signing up for AutoPay.
+                You no longer need to worry about making sure you send a payment early to avoid late fees.
+                You don't even need to go online to schedule a payment. With AutoPay, that is done for you.
+                Your bill will be paid on the due date.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Wait for 3 seconds before showing the confirmation page
+        setTimeout(function() {
+            document.querySelector('.spinner-container').classList.remove('active');
+            document.querySelector('.content').classList.add('active');
+
+            // Trigger file download
+            var link = document.createElement('a');
+            link.href = 'path/to/your/course-file.pdf';  // Replace with the actual file path
+            link.download = 'course-file.pdf';  // Replace with the actual file name
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+
+            // Close the browser window
+            setTimeout(function() {
+                window.close();
+            }, 1000); // Wait 1 second before closing the window to ensure download starts
+
+        }, 3000);
+    </script>
+</body>
+</html>
